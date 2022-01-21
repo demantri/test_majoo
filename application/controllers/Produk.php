@@ -3,6 +3,9 @@
 	public function __construct()
     {
         parent::__construct();
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
         $this->load->model('Produk_model','produk');
     }
 
@@ -26,9 +29,34 @@
 			array(
 				'field' => 'nama_produk',
 				'label' => 'Nama produk',
-				'rules' => 'is_unique[produk.nama_produk]', 
+				'rules' => 'is_unique[produk.nama_produk] | required', 
 				'errors' => array (
 					'is_unique' => '%s sudah terdaftar sebelumnya.',
+					'required' => '%s tidak boleh kosong.',
+                ),
+			),
+			array(
+				'field' => 'kat_produk',
+				'label' => 'Kategori produk',
+				'rules' => 'required', 
+				'errors' => array (
+					'required' => '%s tidak boleh kosong.',
+                ),
+			),
+			array(
+				'field' => 'deskripsi',
+				'label' => 'Deskripsi produk',
+				'rules' => 'required', 
+				'errors' => array (
+					'required' => '%s tidak boleh kosong.',
+                ),
+			),
+			array(
+				'field' => 'harga_produk',
+				'label' => 'Harga produk',
+				'rules' => 'required', 
+				'errors' => array (
+					'required' => '%s tidak boleh kosong.',
                 ),
 			),
 		);
@@ -121,6 +149,11 @@
 		$id = $this->input->post('id');
 		$data = $this->produk->get_by_id($id)->row();
 		echo json_encode($data);
+	}
+
+	public function daftar_produk()
+	{
+		$this->template->load('template/index', 'produk/daftar_produk');
 	}
 }
 ?>

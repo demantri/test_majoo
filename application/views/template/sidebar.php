@@ -8,7 +8,7 @@
 	</a>
 	<hr class="sidebar-divider my-0">
 	<li class="nav-item active">
-		<a class="nav-link" href="<?= base_url('Dashboard') ?>">
+		<a class="nav-link" href="<?= base_url('dashboard') ?>">
 		<i class="fas fa-fw fa-tachometer-alt"></i>
 		<span>Dashboard</span></a>
 	</li>
@@ -19,7 +19,7 @@
 	<li class="nav-item">
 		<a class="nav-link" href="<?= base_url('produk')?>">
 		<i class="fas fa-fw fa-palette"></i>
-		<span>Produk</span>
+		<span>List Produk</span>
 		</a>
 	</li>
 	<li class="nav-item">
@@ -29,6 +29,12 @@
 		</a>
 	</li>
 	<li class="nav-item">
+		<a class="nav-link" href="<?= base_url('produk/daftar_produk')?>">
+		<i class="fas fa-fw fa-palette"></i>
+		<span>Daftar Produk</span>
+		</a>
+	</li>
+	<!-- <li class="nav-item">
 		<a class="nav-link" href="<?= base_url('Customer')?>">
 			<i class="fas fa-fw fa-palette"></i>
 			<span>Pelanggan</span>
@@ -45,9 +51,9 @@
 		<i class="fas fa-fw fa-palette"></i>
 		<span>User</span>
 		</a>
-	</li>
+	</li> -->
 	
-	<hr class="sidebar-divider">
+	<!-- <hr class="sidebar-divider">
 	<div class="sidebar-heading">
 		Transaksi
 	</div>
@@ -84,7 +90,7 @@
 		<i class="fas fa-fw fa-chart-area"></i>
 		<span>Laporan Penjualan Per Produk</span>
 		</a>
-	</li>
+	</li> -->
 	<hr class="sidebar-divider">
 	<!-- <div class="version" id="version-ruangadmin"></div> -->
 </ul>

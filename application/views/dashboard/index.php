@@ -1,1 +1,1 @@
-'testing'
+Hai <?= $this->session->userdata('username');?>
