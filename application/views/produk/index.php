@@ -66,7 +66,7 @@
 				<div class="form-group row">
 					<label for="" class="col-sm-3">Nama Produk</label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" name="nama_produk" id="nama_produk" placeholder="Nama produk" required>
+						<input type="text" class="form-control" name="nama_produk" id="nama_produk" placeholder="Nama produk">
 						<div style="font-size: 13px; color:red">
 							<?php echo form_error('nama_produk'); ?>
 						</div>
@@ -75,24 +75,33 @@
 				<div class="form-group row">
 					<label for="kat_produk" class="col-sm-3 col-form-label">Kategori Produk</label>
 					<div class="col-sm-9">
-						<select name="kat_produk" id="kat_produk" class="select2-single-placeholder form-control" required>
+						<select name="kat_produk" id="kat_produk" class="select2-single-placeholder form-control">
 							<option value="">Pilih Kategori</option>
 							<?php foreach ($kategori as $kat) { ?>
 							<option value="<?= $kat->id?>"><?= $kat->nama_kategori?></option>
 							<?php } ?>
 						</select>
+						<div style="font-size: 13px; color:red">
+							<?php echo form_error('kat_produk'); ?>
+						</div>
 					</div>
 				</div>
 				<div class="form-group row">
 					<label for="deskripsi" class="col-sm-3 col-form-label">Deskripsi Produk</label>
 					<div class="col-sm-9">
-						<textarea name="deskripsi" id="deskripsi" cols="10" rows="5" class="form-control" placeholder="Deskripsi Produk" required></textarea>
+						<textarea name="deskripsi" id="deskripsi" cols="10" rows="5" class="form-control" placeholder="Deskripsi Produk"></textarea>
+						<div style="font-size: 13px; color:red">
+							<?php echo form_error('deskripsi'); ?>
+						</div>
 					</div>
 				</div>
 				<div class="form-group row">
 					<label for="harga_produk" class="col-sm-3 col-form-label">Harga Produk</label>
 					<div class="col-sm-9">
-						<input type="text" name="harga_produk" class="form-control" id="harga_produk" placeholder="Harga produk" required>
+						<input type="text" name="harga_produk" class="form-control" id="harga_produk" placeholder="Harga produk">
+						<div style="font-size: 13px; color:red">
+							<?php echo form_error('harga_produk'); ?>
+						</div>
 					</div>
 				</div>
 				<hr>

@@ -29,7 +29,7 @@
 			array(
 				'field' => 'nama_produk',
 				'label' => 'Nama produk',
-				'rules' => 'is_unique[produk.nama_produk] | required', 
+				'rules' => 'is_unique[produk.nama_produk]|required', 
 				'errors' => array (
 					'is_unique' => '%s sudah terdaftar sebelumnya.',
 					'required' => '%s tidak boleh kosong.',
